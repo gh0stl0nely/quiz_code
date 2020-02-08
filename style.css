@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+ background-color: #034f84;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    color: #daebe8;
+}
+.new{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-style: dotted;
+}
+                                            /* Introduction page style (index.html)  */
+.start{
+    border-style: solid;
+    border-color: #cfe0e8;
+    color: #cfe0e8;
+    width: 40%;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.start:hover{
+    transition: 0.8s;
+    background-color: white;
+    color: black;
+}
+.form-group{
+    width: 35%;
+    margin: 0 auto;
+}
+
+input{
+    display: block; 
+    margin: 0 auto;
+    text-align: center; 
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+                                            /* Test page style (test.html)  */
+#questionTag{
+    margin: 0 auto;
+    margin-top: 100px;
+    height: 100%;
+    width: 70%;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: white;
+    background-color: #daebe8;
+    text-align: center;
+}
+
+.answer{
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-left: 5px;
+    width: 50%;
+    border-style: solid;
+    background-color: #daebe8;
+    border-color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 30px;
+
+    /* transition: 0.5s;
+    transition-timing-function: ease; */
+}
+
+
+
+#continue{
+    margin: 0 auto;
+    margin-top: 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 30%;
+    border-style: solid;
+    background-color: black;
+    color: white;
+    font-size: 100%;
+}
+
+#continue:hover{
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+#timer{
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    border-style: solid;
+    background-color: black;
+    color: white;
+    font-size: 100%;
+}
+                                                        /* Result page (result.html)  */
+/* */
+
+.container{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 100%;
+    padding: 10px;
+    color: #daebe8;
+    
+}
+
+li{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+    list-style: none;
+    border-style: solid;
+    width: 70%;
+}
+
+hr{
+    margin-top: 10px;
+}
+/* Third file */ 
+.delete{
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+}
+
+.retake{
+    cursor: pointer;
+    background-color: rgb(173, 226, 241);
+    width: 30%;
+    color: black;
+}
+
+.vertical{
+    border-left: solid black;
+    margin-left: 5px;
+}
+
+.name{
+    cursor: pointer;
+    position: absolute;
+    left: 5px;
+}
