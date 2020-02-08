@@ -91,7 +91,7 @@ var question_and_answer = [
         "3": "Convert it into an object",
         "4": "Parse it",
         "5": "None of the above",
-        answer: "String"
+        answer: "Parse it"
     }
     
 ]
