@@ -75,7 +75,25 @@ var question_and_answer = [
         "5": "setInterval requires no handler function but setTimeout requires a handler function",
         answer: "setTimeout runs the handler function once and setInterval runs the handler function continuously"
     },
-
+    {
+        question: "What type of data does web storage store?",
+        "1": "String",
+        "2": "Tree",
+        "3": "Object",
+        "4": "Array",
+        "5": "List",
+        answer: "String"
+    },
+    {
+        question: "What should a developer do before getting an array from a web storage?",
+        "1": "Nothing",
+        "2": "Convert it into a string",
+        "3": "Convert it into an object",
+        "4": "Parse it",
+        "5": "None of the above",
+        answer: "String"
+    }
+    
 ]
 
 console.log(question_and_answer.length);
