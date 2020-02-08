@@ -96,7 +96,7 @@ var question_and_answer = [
     
 ]
 
-console.log(question_and_answer.length);
+
 
 //Done
 function startQuiz(){
