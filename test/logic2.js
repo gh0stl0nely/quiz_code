@@ -1,28 +1,32 @@
 var question_and_answer = [
     {
-        question: "What is 1+1",
-        "1": 4,
-        "2": 5,
-        "3": 1,
-        "4": 2,
-        answer: 2
+        question: "How do you prevent an execution of a default behaviour of some elements?",
+        "1": "preventDefault(event)",
+        "2": "event.preventDefault()",
+        "3": "stopDefault(event)",
+        "4": "event.stopDefault()",
+        "5": "None of the above",
+        answer: "event.preventDefault()"
+
     },
 
     {
-        question: "What is 2+2",
-        "1": 3,
-        "2": 1,
-        "3": 4,
-        "4": 8,
-        answer: 4
+        question: "How do you store an element called ‘myName’ on client-side storage with the value ‘Andy’?",
+        "1": "localStorage.setName(‘myName’, ‘Andy’)",
+        "2": "localStorage.set(‘myName’, ‘Andy’)",
+        "3": "webStorage.set(‘myName’, ‘Andy’)",
+        "4": "webAPI.store(‘myName’, ‘Andy’)",
+        "5": "None of the above",
+        answer: "None of the above"
     },
     {
-        question: "What is 3+3",
-        "1": 3,
-        "2": 1,
-        "3": 4,
-        "4": 'None',
-        answer: 'None'
+        question: "What does DOM stand for in web development?",
+        "1": "Document Object Model",
+        "2": "Documentation Object Model",
+        "3": "Document Oriented Model",
+        "4": 'Documentation Orientation Model',
+        "5": "None of the above",
+        answer: 'Document Object Model'
     },
     {
         question: "What is 4+4",
@@ -33,21 +37,23 @@ var question_and_answer = [
         answer: 8
     },
     {
-        question: "What is 5+5",
-        "1": 3,
-        "2": 1,
-        "3": 10,
-        "4": 'None',
-        answer: 10
+        question: "How do you store an empty array on client side storage with the key ‘array’?",
+        "1": "clientStorage.setItem(‘array’, [])",
+        "2": "clientStorage.setItem(‘array’, ‘[]’)",
+        "3": "localStorage.setItem(‘array’, [])",
+        "4": "sessionStorage.setItem(‘array’, ‘[]’)",
+        "5": "None of the above",
+        answer: "None of the above"
     }
     ,
     {
-        question: "What is 6+6",
-        "1": 3,
-        "2": 1,
-        "3": 10,
-        "4": 'None',
-        answer: 'None'
+        question: "What is the difference between setTimeout and setInterval?",
+        "1": "There is no difference",
+        "2": "setTimeout runs the handler function once and setInterval runs the handler function continuously",
+        "3": "setTimeout runs the handler function runs the handler function continuously and setInterval runs the handler function once",
+        "4": "setTimeout requires no handler function but setInterval requires a handler function",
+        "5": "setInterval requires no handler function but setTimeout requires a handler function",
+        answer: "setTimeout runs the handler function once and setInterval runs the handler function continuously"
     }
 ]
 
@@ -91,7 +97,7 @@ function displayQuestion(){
 
     document.getElementById('question').innerHTML = randomized_array[0]['question'];
 
-    for(var i = 1; i <= 4; i++){
+    for(var i = 1; i <= 5; i++){
         document.getElementById('answer'+i).innerHTML = randomized_array[0][i];
     }
     
@@ -148,7 +154,7 @@ function nextQuestion(){
 
     document.getElementById('question').innerHTML = randomized_array[currentQuestion]['question'];
 
-    for(var i = 1; i <= 4; i++){
+    for(var i = 1; i <= 5; i++){
         document.getElementById('answer'+i).innerHTML = randomized_array[currentQuestion][i];
         document.getElementById('answer'+i).style.transition = 'none';
         document.getElementById('answer'+i).style.width = '50%';

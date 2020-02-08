@@ -1,5 +1,3 @@
-
-
 function resetScore(){
     var time_limit = document.getElementById('time_limit').value;
     var question_limit = document.getElementById('question_limit').value;
