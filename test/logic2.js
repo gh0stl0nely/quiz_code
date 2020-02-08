@@ -53,6 +53,8 @@ var question_and_answer = [
 
 //Done
 function startQuiz(){
+    //Set score to 0
+    document.getElementById('current').innerHTML = localStorage.getItem('current_score');
     //Set timer and start counting down
     tick();
     // Display questions
@@ -63,6 +65,7 @@ function startQuiz(){
 function tick(){
     var seconds = Number(localStorage.getItem('time_limit')); // Got from Local Storage
     document.getElementById('countDown').textContent = seconds;
+    
 
     if(seconds > 0){
         seconds--;
@@ -108,7 +111,7 @@ function chooseAnswer(i){
     document.getElementById('answer'+i).style.width = '60%';
 
     //Store their answer to access later before moving to another question 
-    sessionStorage.setItem('user_choice', user_choice);
+    localStorage.setItem('user_choice', user_choice);
     
 }
 
@@ -119,13 +122,14 @@ function nextQuestion(){
     // that the user chose, then end game
     var currentQuestion = Number(sessionStorage.getItem('questionNumber')); // Game begins with 1, and then 2
     var randomized_array = JSON.parse(sessionStorage.getItem('randomized_array')); // Get the random array that was stored
-    var user_choice = sessionStorage.getItem('user_choice'); 
+    var user_choice = localStorage.getItem('user_choice'); 
 
     var new_current_score = Number(localStorage.getItem('current_score'));
     
     if(user_choice == randomized_array[currentQuestion-1]['answer']){
         new_current_score++;
         localStorage.setItem('current_score', new_current_score);
+        document.getElementById('current').innerHTML = new_current_score;
     } else {
         // clearTimeout(tick);
         var goes_down_by = Number(localStorage.getItem('goes_down_by'));
@@ -133,11 +137,6 @@ function nextQuestion(){
         localStorage.setItem('time_limit',reduced_time);
         document.getElementById('countDown').textContent = reduced_time + 1;
     }
-
-    // } else {
-    //     alert('Wrong answer');
-    //     // Stop the clicking , set the timer to thing and stop ticking again
-    // 
 
     if(currentQuestion == questions){
         endGame();
@@ -155,42 +154,34 @@ function nextQuestion(){
         document.getElementById('answer'+i).style.width = '50%';
     }
 
+    localStorage.setItem('user_choice', null);
+
 }
 
 function endGame(){
-    var high_score = Number(localStorage.getItem('highest_score'));
+    var high_score = Number(localStorage.getItem('highest_score')); // First time setting high score will be 0 ! 
     var current_score = Number(localStorage.getItem('current_score'));
     var name = localStorage.getItem('name');
+
     var record = {'name': name, 'score':current_score}; // A record object
 
     var score_board_array = JSON.parse(localStorage.getItem('score_board_array'));
 
     // When end game, push the current score to the score board array stored
 
-    // alert(typeof JSON.parse(score_board_array)); // It is an object   
-
     score_board_array.push(record);
-
     localStorage.setItem('score_board_array', JSON.stringify(score_board_array));
     
     //Store highest score and display it 
 
     window.location.href = '../result/result.html';
 
-
     // Check if there is an existing highest score, if yes, compare it to current score, if not just set it
-    if(high_score){
-        if(current_score > high_score){
-            localStorage.setItem('highest_score', current_score);
-            alert('You got a new Score!');
-            window.location.href = '../result/result.html';
-        } 
+    if(current_score > high_score){
+        localStorage.setItem('highest_score', current_score);
+        alert('Congratulations! A new record is set at : ' + current_score);
+        window.location.href = '../result/result.html';
     } 
-    
-    else {
-       localStorage.setItem('highest_score', current_score); 
-       window.location.href = '../result/result.html';
-    }
 }
 
 // Helper to randomize the question array order

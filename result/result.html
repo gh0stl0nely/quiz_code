@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../style.css">
     <script src="logic3.js"></script>   
    
     <title>Result</title>
 </head>
 <body onload="displayScore()">
-    <div class="container">TOP SCORE : <span id="high_score"></span></div>
-    <div class="container" style="width: 35%">QUIZ SCORE : <span id="score"></span> </div>
+    <div style="text-align: center; margin-top: 20px; font-size: 50px;">
+        <i style="color: white;" class="fa fa-star"></i>
+        <i style="color: black;" class="fa fa-star"></i>
+        <i style="color: white;" class="fa fa-star"></i>
+        <i style="color: black;" class="fa fa-star"></i>
+        <i style="color: white;" class="fa fa-star"></i>
+    </div>
+    
+    <div class="box" style="background-color: white; color: black; margin-top:30px; font-weight: bold; text-decoration: underline;">TOP SCORE : <span id="high_score"></span></div>
+    <div class="box" style="width: 40%;background-color: white; color: black;">QUIZ SCORE : <span id="score"></span> </div>
 
-    <div class="container" style="background-color: #daebe8; color: black;"> 
-        <p>Your Scoreboard</p>
+    <div class="box" style="width: 20%;cursor: pointer" onclick="window.location.href = '../index.html'">Retake Quiz</div>
+    <div class="box" style="width: 20%; cursor: pointer;"onclick="clearScore()">Clear All</div> 
+  
+    <div class="box" style="background-color: #daebe8; color: black;"> 
+        <p style="font-size: 100%; font-weight: bold;">Score board</p>
         <hr>
 
         <ul id="score_board">
@@ -23,7 +35,6 @@
         
     </div>
     
-    <div class="container retake" onclick="window.location.href='../index.html'">Retake Quiz</div>
 </body>
 </html>
 

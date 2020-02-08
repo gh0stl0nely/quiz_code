@@ -17,7 +17,7 @@ h1{
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 20px;
-    border-style: dotted;
+    border-style: solid;
 }
                                             /* Introduction page style (index.html)  */
 .start{
@@ -49,6 +49,20 @@ input{
     text-align: center; 
     border-radius: 4px;
     margin-top: 10px;
+}
+
+.viewScore{
+    border-style: solid;
+    border-color: #cfe0e8;
+    color: #cfe0e8;
+    width: 40%;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
 }
 
                                             /* Test page style (test.html)  */
@@ -114,7 +128,7 @@ input{
                                                         /* Result page (result.html)  */
 /* */
 
-.container{
+.box{
     width: 50%;
     text-align: center;
     margin: 0 auto;
@@ -124,7 +138,11 @@ input{
     font-size: 100%;
     padding: 10px;
     color: #daebe8;
-    
+}
+
+.box1{
+    border-style: solid;
+    border-radius: 10px;
 }
 
 li{
@@ -138,19 +156,14 @@ li{
 
 hr{
     margin-top: 10px;
+    border-color: black;
+    
 }
 /* Third file */ 
 .delete{
     cursor: pointer;
     position: absolute;
     right: 5px;
-}
-
-.retake{
-    cursor: pointer;
-    background-color: rgb(173, 226, 241);
-    width: 30%;
-    color: black;
 }
 
 .vertical{

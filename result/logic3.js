@@ -1,6 +1,6 @@
 function displayScore(){
     // Display high score by comparing 
-    var high_score = localStorage.getItem('highest_score');
+    var high_score = Number(localStorage.getItem('highest_score'));
     var current_score = localStorage.getItem('current_score');
     document.getElementById('high_score').innerHTML = high_score;
     document.getElementById("score").innerHTML = current_score;
@@ -41,6 +41,19 @@ function addToScoreBoardAndSave(){
         li.appendChild(span2);
         document.getElementById('score_board').appendChild(li);
     }
+}
+
+function clearScore(){
+    var answer = confirm('Warning. This action cannot be reversed. Do you want to reset your score board?');
+    if(answer){
+        localStorage.setItem('score_board_array', JSON.stringify([]));
+        localStorage.setItem('highest_score', 0);
+        localStorage.setItem('current_score', 0);
+        document.getElementById('score_board').innerHTML = "";
+        document.getElementById('high_score').innerHTML = 0;
+        document.getElementById('score').innerHTML = 0;
+    }
+
 }
 
 function sortBoard(nums){
