@@ -51,19 +51,6 @@ input{
     margin-top: 10px;
 }
 
-.viewScore{
-    border-style: solid;
-    border-color: #cfe0e8;
-    color: #cfe0e8;
-    width: 40%;
-    font-size: 20px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    cursor: pointer;
-}
 
                                             /* Test page style (test.html)  */
 #questionTag{
@@ -88,7 +75,7 @@ input{
     border-color: black;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 100%;
 
     /* transition: 0.5s;
     transition-timing-function: ease; */
