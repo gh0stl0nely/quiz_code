@@ -26,15 +26,35 @@ var question_and_answer = [
         "3": "Document Oriented Model",
         "4": 'Documentation Orientation Model',
         "5": "None of the above",
-        answer: 'Document Object Model'
+        answer: "Document Object Model"
     },
     {
-        question: "What is 4+4",
-        "1": 3,
-        "2": 1,
-        "3": 4,
-        "4": 8,
-        answer: 8
+        question: "Which of the following returns only Element children?",
+        "1": "The ‘children’ property",
+        "2": "The ‘childNodes’ property",
+        "3": "The ‘childList’ property’",
+        "4": "The ‘childrenNodes’ property",
+        "5": "None of the above",
+        answer: "The ‘children’ property"
+    },
+    {
+        question: "Which of the following returns both Element and Nodes children?",
+        "1": "The ‘children’ property",
+        "2": "The ‘childNodes’ property",
+        "3": "The ‘childList’ property’",
+        "4": "The ‘childrenNodes’ property",
+        "5": "None of the above",
+        answer: "The 'childNodes' property"
+    },
+    {
+        question: "Which of the following returns both Element and Nodes children?",
+        "1": "Local storage stores data on the browser forever and cannot be deleted, while session storage stores data on the browser temporarily and data will be deleted upon moving to another website",
+        "2": "Local storage stores data on the browser for 24 hours only while session storage stores data on the browser forever",
+        "3": "Session storage stores data on the browser forever and cannot be deleted, while local storage stores data on the browser temporarily and data will be deleted upon moving to another website",
+        "4": "There is no difference",
+        "5": "None of the above",
+        answer: "None of the above"
+
     },
     {
         question: "How do you store an empty array on client side storage with the key ‘array’?",
@@ -54,8 +74,11 @@ var question_and_answer = [
         "4": "setTimeout requires no handler function but setInterval requires a handler function",
         "5": "setInterval requires no handler function but setTimeout requires a handler function",
         answer: "setTimeout runs the handler function once and setInterval runs the handler function continuously"
-    }
+    },
+
 ]
+
+console.log(question_and_answer.length);
 
 //Done
 function startQuiz(){
