@@ -44,10 +44,10 @@ var question_and_answer = [
         "3": "The ‘childList’ property’",
         "4": "The ‘childrenNodes’ property",
         "5": "None of the above",
-        answer: "The 'childNodes' property"
+        answer: "The ‘childNodes’ property"
     },
     {
-        question: "Which of the following returns both Element and Nodes children?",
+        question: "What is the difference between local storage and session storage in web development?",
         "1": "Local storage stores data on the browser forever and cannot be deleted, while session storage stores data on the browser temporarily and data will be deleted upon moving to another website",
         "2": "Local storage stores data on the browser for 24 hours only while session storage stores data on the browser forever",
         "3": "Session storage stores data on the browser forever and cannot be deleted, while local storage stores data on the browser temporarily and data will be deleted upon moving to another website",
