@@ -15,6 +15,10 @@ Working internet
 * [HTML](https://devdocs.io/html/)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Javascript](https://devdocs.io/javascript/)
+* [Bootstrap](https://getbootstrap.com/)
+* [JQuery](https://jquery.com/)
+* [WEP API Storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage)
+
 
 ## Authors
 
