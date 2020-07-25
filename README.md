@@ -17,7 +17,7 @@ Working internet
 * [Javascript](https://devdocs.io/javascript/)
 * [Bootstrap](https://getbootstrap.com/)
 * [JQuery](https://jquery.com/)
-* [WEP API Storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage)
+* [Web API Storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage)
 
 
 ## Authors
